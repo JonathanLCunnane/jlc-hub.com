@@ -13,8 +13,8 @@ body
 {
     overflow: hidden;
     font-family: monospace;
-    background: rgb(51, 51, 51);
-    color: rgb(255, 255, 255);
+    background: #1f1f1f;
+    color: #ffffff;
     height: 100vh;
     line-height: 1.6;
     padding: 5px;
@@ -74,10 +74,10 @@ body
 .ls td
 {
     padding: 0 1em;
-    border: .05em solid transparent;
+    background-color: none;
 }
 
 .ls td:hover
 {
-    border: .05em solid whitesmoke;
+    background-color: #1a1a1a;
 }
