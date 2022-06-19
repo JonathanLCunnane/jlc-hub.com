@@ -12,116 +12,72 @@
 body 
 {
     overflow: hidden;
-    font-family: "Merienda";
+    font-family: monospace;
     background: rgb(51, 51, 51);
     color: rgb(255, 255, 255);
     height: 100vh;
     line-height: 1.6;
+    padding: 5px;
+    font-size: 20px;
+    letter-spacing: .08em;
 }
 
-.smooth_scrolling_container 
+.green
 {
-    width: 100%;
-    height: 100%;
-    /* The following was found online and is used for the smooth scroll*/
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
+    color: green;
+    font-weight: bold;
 }
 
-.navbar 
+.white
 {
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    display: flex;
-    width: 100%;
-    height: 30px;
+    color: whitesmoke;
 }
 
-.navbar ul 
+.blue
 {
-    display: flex;
-    list-style: none;
-    width: 100%;
-    justify-content: center;
+    color: aqua;
 }
 
-.navbar ul li 
+.typing
 {
-    margin: 0 1.5rem;
-    padding: 2rem 5rem;
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0 auto;
+    border-right: .15em solid orange;
+    animation:
+        cursor-blink .75s step-end infinite;
 }
 
-.navbar ul li a 
-{
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #e4e4e4;
-    transition: 0.5s ease-in-out 50ms;
+@keyframes typing-animation {
+    from {
+        width: 0%
+    }
+    to {
+        width: 100% 
+    }
 }
 
-.navbar ul li a:hover 
-{
-    color: #d1e0fd;
+@keyframes cursor-blink {
+    from, to {
+        border-color: transparent
+    }
+    50% {
+        border-color: orange;
+    }
 }
 
-section 
+.ls
 {
-    align-items: center; 
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-
-    scroll-snap-align: center;
+    margin: 0 0 0 4em;
 }
 
-section h1 
+.ls td
 {
-    font-size: 3.5rem;
+    padding: 0 1em;
+    border: .05em solid transparent;
 }
 
-section#home 
+.ls td:hover
 {
-    background-image: url(../img/home.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-}
-
-section#introduction
-{
-    background-image: url(../img/introduction.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-}
-
-section#about 
-{
-    background-image: url(../img/about.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-}
-
-section#contact 
-{
-    background-image: url(../img/contact.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-}
-
-.note 
-{
-    font-size: 0.9rem;
+    border: .05em solid whitesmoke;
 }
